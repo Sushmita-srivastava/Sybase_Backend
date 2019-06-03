@@ -10,7 +10,7 @@
 	<groupId>com.infosys.juniper</groupId>
 	<artifactId>JuniperOnPremExtractOracleWS</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>JuniperOnPremExtractOracleWS</name>
+	<name>JuniperOnPremExtractSybaseWS</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

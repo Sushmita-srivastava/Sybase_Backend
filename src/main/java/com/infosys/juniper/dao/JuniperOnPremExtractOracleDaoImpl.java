@@ -469,7 +469,7 @@ public class JuniperOnPremExtractOracleDaoImpl implements JuniperOnPremExtractOr
 			if(rs.next()) {
 				connection_type=rs.getString(1);
 				System.out.println("connection_type is "+connection_type);
-				if(connection_type.equalsIgnoreCase("ORACLE")) {
+				if(connection_type.equalsIgnoreCase("Sybase")) {
 					String source_connection_details="select host_name,port_no,username,password,database_name,service_name,ENCRYPTED_ENCR_KEY from "+MetadataDBConstants.CONNECTIONTABLE+
 								" where src_conn_sequence=(select distinct src_conn_sequence from "+MetadataDBConstants.FEEDSRCTGTLINKTABLE
 								+" where feed_sequence="+feed_sequence+")";

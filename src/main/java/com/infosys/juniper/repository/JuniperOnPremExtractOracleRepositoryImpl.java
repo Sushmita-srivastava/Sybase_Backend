@@ -21,11 +21,13 @@ public class JuniperOnPremExtractOracleRepositoryImpl implements JuniperOnPremEx
 		try {
 			if(connDto.getServiceName()==null||connDto.getServiceName().isEmpty()) {
 				//34.98.98.765:5000/pubs2, username, passwd
+				//34.98.98.765:5000
+				System.out.println("connection null");
 				conn=ConnectionUtils.connectToOracle(connDto.getHostName()+":"+connDto.getPort()+":"+connDto.getDbName(), connDto.getUserName(), connDto.getPassword());
 			}else {
 				System.out.println("Connecting to Source Database"+connDto.getHostName() );
 				
-				conn=ConnectionUtils.connectToOracle(connDto.getHostName()+":"+connDto.getPort()+"/"+connDto.getServiceName(), connDto.getUserName(), connDto.getPassword());
+				conn=ConnectionUtils.connectToOracle(connDto.getHostName()+":"+connDto.getPort(),connDto.getUserName(), connDto.getPassword());//+"/"+connDto.getServiceName(), connDto.getUserName(), connDto.getPassword());
 				System.out.println("Connection established");
 			}
 			conn.close();
