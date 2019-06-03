@@ -1,2 +1,2 @@
-# Juniper-ExtOracleBackend
-Juniper MS for Extraction Oracle backend
+# Juniper-ExtSybaseBackend
+Juniper MS for Extraction Sybase backend
